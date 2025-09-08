@@ -103,10 +103,14 @@ http://localhost:5000
 ```
 backend/
 │
-├─ server.js        # Main Express server
-├─ actions.json     # Data storage file
-└─ package.json
-```
+├─ node_modules/ # Installed dependencies
+│
+├─ actions.json # JSON file storing sustainability actions
+├─ server.js # Main Express server
+│
+├─ package.json # Project metadata and dependencies
+├─ package-lock.json # Lockfile for dependency versions
+└─ README.md # Documentation for backend
 
 ---
 

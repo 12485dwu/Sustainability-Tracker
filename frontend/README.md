@@ -56,18 +56,28 @@ http://localhost:3000
 * API calls are made to `/api/actions`.
 
 ---
-
-## File Structure
-
-```
+**File Structure:**
 frontend/
 │
+├─ public/                # Static files (index.html, favicon, etc.)
+│
 ├─ src/
-│   ├─ App.js          # Main React component
-│   └─ api.js          # Axios instance for API calls (if applicable)
+│   ├─ ActionForm.js      # Form component for adding/editing actions
+│   ├─ ActionTable.js     # Table component to display actions
+│   ├─ api.js             # Axios instance for API calls
+│   ├─ App.js             # Root React component
+│   ├─ App.css            # Styles for App component
+│   ├─ App.test.js        # App-level tests
+│   ├─ index.js           # Entry point (renders React app)
+│   ├─ index.css          # Global styles
+│   ├─ logo.svg           # React logo asset
+│   ├─ reportWebVitals.js # Performance measuring
+│   └─ setupTests.js      # Testing setup
+│
+├─ .gitignore
 ├─ package.json
-└─ public/
-```
+├─ package-lock.json
+└─ README.md
 
 ---
 
