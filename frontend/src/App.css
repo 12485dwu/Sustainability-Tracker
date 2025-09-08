@@ -1,0 +1,168 @@
+/* App.css */
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Header */
+.App-header {
+  background: linear-gradient(135deg, #4a90e2, #50e3c2);
+  width: 100%;
+  max-width: 900px;
+  padding: 40px 20px;
+  border-radius: 16px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Logo */
+.App-logo {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: spin 20s linear infinite;
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Buttons */
+button {
+  padding: 8px 16px;
+  margin: 0 4px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.add {
+  background-color: #4a90e2;
+  color: white;
+}
+
+button.add:hover {
+  background-color: #357ab7;
+}
+
+button.delete {
+  background-color: #e94e77;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #c43d61;
+}
+
+button.edit {
+  background-color: #f5a623;
+  color: white;
+}
+
+button.edit:hover {
+  background-color: #d4881f;
+}
+
+button.cancel {
+  background-color: #aaa;
+  color: white;
+}
+
+button.cancel:hover {
+  background-color: #888;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+}
+
+form input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex: 1 1 200px;
+  font-size: 1rem;
+}
+
+form button {
+  flex: 1 1 120px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+th, td {
+  padding: 14px 20px;
+  text-align: left;
+}
+
+th {
+  background-color: #4a90e2;
+  color: #fff;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #e8f1ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+  }
+  
+  table, th, td {
+    font-size: 0.9rem;
+  }
+}
