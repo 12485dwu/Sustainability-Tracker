@@ -56,7 +56,10 @@ http://localhost:3000
 * API calls are made to `/api/actions`.
 
 ---
-**File Structure:**
+
+## File Structure
+
+```
 frontend/
 │
 ├─ public/                # Static files (index.html, favicon, etc.)
@@ -78,6 +81,7 @@ frontend/
 ├─ package.json
 ├─ package-lock.json
 └─ README.md
+```
 
 ---
 

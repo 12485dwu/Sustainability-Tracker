@@ -111,6 +111,7 @@ backend/
 ├─ package.json # Project metadata and dependencies
 ├─ package-lock.json # Lockfile for dependency versions
 └─ README.md # Documentation for backend
+```
 
 ---
 
