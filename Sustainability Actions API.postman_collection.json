@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "9546b6c7-a1fc-46ad-931f-4fdd419ee569",
+		"name": "Sustainability Actions API",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48226349",
+		"_collection_link": "https://restless-station-1162369.postman.co/workspace/Dan-Wu's-Workspace~ff943a51-395a-4a81-85be-55df5710789b/collection/48226349-9546b6c7-a1fc-46ad-931f-4fdd419ee569?action=share&source=collection_link&creator=48226349"
+	},
+	"item": [
+		{
+			"name": "POST a new action",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"action\": \"Plant a tree\",\r\n  \"date\": \"2025-09-07\",\r\n  \"points\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/actions",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"actions"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "GET the action",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/actions",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"actions"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "PUT (update) an action",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"action\": \"Recycle plastic bottles\",\r\n  \"date\": \"2025-09-07\",\r\n  \"points\": 15\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/actions/1757307914826",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"actions",
+						"1757307914826"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE an action",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/actions/1757307914826",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"actions",
+						"1757307914826"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET the action",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/actions",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"actions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
